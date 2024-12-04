@@ -1,0 +1,19 @@
+<div>
+<!-- Con el # llamamos miFormulario a toda la informacion obtenida en el formulario -->
+  <form action="" class="form-group row" #miFormulario = "ngForm" (ngSubmit)="login(miFormulario)">
+
+    <div class="form-grup col-md-3">
+      <!-- Vinculo el valor al submit con ngModel -->
+      <input type="email" name="email" placeholder="Email" class="form-control" ngModel>
+    </div>
+
+    <div class="form-grup col-md-3">
+      <input type="password" name="password" placeholder="Password" class="form-control" ngModel>
+    </div>
+    <br>
+    <div class="form-grup col-md-3">
+      <button class="btn btn-primary" type="submit">Login</button>
+    </div>
+
+  </form>
+</div>

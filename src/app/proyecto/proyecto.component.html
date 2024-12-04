@@ -1,0 +1,37 @@
+<form class="form-group row">
+
+  <div class="form-grup col-md-3">
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombreRegistro"
+      class="form-control">
+  </div>
+
+  <div class="form-grup col-md-3">
+    <label for="apllido">Apellido: </label>
+    <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellidoRegistro"
+      class="form-control">
+  </div>
+
+  <div class="form-grup col-md-3">
+    <label for="cargo">Cargo: </label>
+    <input type="text" name="cargo" id="cargo" placeholder="Cargo" [(ngModel)]="cargoRegistro" class="form-control">
+  </div>
+
+  <div class="form-grup col-md-3">
+    <label for="salario">Salario: </label>
+    <input type="text" name="salario" id="salario" placeholder="Salario" [(ngModel)]="salarioRegistro"
+      class="form-control">
+  </div>
+
+  <br>
+
+  <div class="col">
+    <input type="button" value="Registrar" class="btn btn-primary" (click)="registrarEmpleado()">
+  </div>
+</form>
+
+<div style="text-align: center;">
+  <button type="button" class="btn btn-primary" (click)="volverHome()" >
+    Ir a inicio
+  </button>
+</div>

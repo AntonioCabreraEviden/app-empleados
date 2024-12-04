@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div >
+          {{indice+1}}: {{empleadoLista.nombre}} {{empleadoLista.apellido}} {{empleadoLista.cargo}} {{empleadoLista.salario}}
+          <!-- Con routerLink indicamos a que nos redirecciona, el atributo indice sera el que pasemos a la url 
+           Tambien podemos pasar parametros con queryParams pero este no hay que declararlo en el router-->
+          <a [routerLink]="['/actualiza',indice]" [queryParams]="{accion:1}" style="margin-right:10px ;">Actualiza</a>
+          <a [routerLink]="['/actualiza',indice]" [queryParams]="{accion:2}">Eliminar</a>
+        </div>
+        <ul>
+            <li *ngFor="let nuevaCaracteristica of arrayCaracteristicas">{{nuevaCaracteristica}}</li>
+          </ul>
+
+        <!-- Esto recibe desde un hijo al padre y permite que usemos su informacion -->
+        <app-caracteristicas-empleado-c (caracteristicasEmpleados)="agregarCaracteristicas($event)"></app-caracteristicas-empleado-c>
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+
+<div class="container">
+  <div class="col">
+    <h1 style="text-align: center;">{{titulo}}</h1>
+  </div>
+  <br><br>
+  <h2>Registrar nuevo empleado</h2>
+
+  <form class="form-group row">
+
+    <div class="form-grup col-md-3">
+      <label for="nombre">Nombre: </label>
+      <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombreRegistro"
+        class="form-control">
+    </div>
+
+    <div class="form-grup col-md-3">
+      <label for="apellido">Apellido: </label>
+      <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellidoRegistro"
+        class="form-control">
+    </div>
+
+    <div class="form-grup col-md-3">
+      <label for="cargo">Cargo: </label>
+      <input type="text" name="cargo" id="cargo" placeholder="Cargo" [(ngModel)]="cargoRegistro" class="form-control">
+    </div>
+
+    <div class="form-grup col-md-3">
+      <label for="salario">Salario: </label>
+      <input type="text" name="salario" id="salario" placeholder="Salario" [(ngModel)]="salarioRegistro"
+        class="form-control">
+    </div>
+
+    <br>
+
+    <div class="col">
+      <input type="button" value="Registrar" class="btn btn-primary" (click)="registrarEmpleado()">
+    </div>
+  </form>
+  <br>
+
+</div>
+
+<!-- Colocando los corchetes y decidiendo un nombre arbitrario podemos enviar
+  a los componentes hijos informacion -->
+<app-empleado-hijo-c *ngFor="let empleado of empleados; index as i" [empleadoLista]="empleado"
+  [indice]="i"></app-empleado-hijo-c>
