@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import firebase from 'firebase/compat/app';
 import { LoginService } from './login/login.service';
 
+import firebase from 'firebase/compat/app';
 
 
 
